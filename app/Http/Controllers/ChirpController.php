@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Chirp;
 // use GuzzleHttp\Psr7\Response;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 use Illuminate\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Gate;
@@ -76,7 +75,7 @@ class ChirpController extends Controller
         Gate::authorize('update', $chirp);
 
         $validated = $request->validate([
-            'message' => 'required|string|max255',
+            'message' => 'required|string|max:255',
         ]);
 
         $chirp->update($validated);

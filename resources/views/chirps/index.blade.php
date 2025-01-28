@@ -35,7 +35,7 @@
                                         </button>
                                     </x-slot>
                                     <x-slot name="content">
-                                        <x-dropdown-link : href="route('chirps.edit', $chirp)">
+                                        <x-dropdown-link :href="route('chirps.edit', $chirp)">
                                             {{ __('Edit') }}
                                         </x-dropdown-link>
                                     </x-slot>
